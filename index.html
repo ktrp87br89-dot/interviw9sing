@@ -143,7 +143,7 @@
     </div>
 
     <script>
-        // 🎯 เช็คว่า URL ถูกต้องไหม
+        // 🚀 ฝัง URL เรียบร้อยแล้ว
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzm8sJ_e0dVKtatb-_J2BvO7bwL4IcwRJbgL2eMJOXkIT7aTqmv1vZt58P8XIqifQ/exec';
 
         const positionSelect = document.getElementById('position');
@@ -160,7 +160,7 @@
             }
         });
 
-        // 🎯 ตัวจัดการไฟล์อัปโหลดแบบเสถียร
+        // จัดการไฟล์อัปโหลด
         const fileInput = document.getElementById('resumeFile');
         const fileNameDisplay = document.getElementById('fileNameDisplay');
         let base64String = "";
@@ -177,12 +177,10 @@
                     return;
                 }
                 
-                // โชว์ชื่อไฟล์สีฟ้าบนเว็บ
                 fileNameDisplay.innerHTML = `<span class="text-indigo-600 font-bold">📄 ${file.name}</span>`;
                 uploadedFileName = file.name;
                 uploadedMimeType = file.type;
 
-                // เครื่องยนต์แปลงไฟล์เป็น Base64
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     base64String = e.target.result.split(',')[1];
@@ -194,7 +192,7 @@
             }
         });
 
-        // 🎯 ทำงานเมื่อกด Submit
+        // ทำงานเมื่อกด Submit
         document.getElementById('interviewForm').addEventListener('submit', function(event) {
             event.preventDefault(); 
             
@@ -207,7 +205,6 @@
             
             let finalPosition = positionSelect.value === 'อื่นๆ' ? otherPositionInput.value : positionSelect.value;
 
-            // รวบรวมข้อมูลทั้งหมด
             const data = {
                 prefix: document.getElementById('prefix').value,
                 name: document.getElementById('fullName').value,
@@ -216,7 +213,7 @@
                 recruiter: document.getElementById('recruiter').value,
                 date: document.getElementById('date').value,
                 time: document.getElementById('time').value,
-                fileData: base64String, // <--- สอดไส้ไฟล์ไปด้วย
+                fileData: base64String,
                 fileName: uploadedFileName,
                 mimeType: uploadedMimeType
             };
@@ -257,8 +254,8 @@
                     }).then(() => {
                         document.getElementById('interviewForm').reset();
                         otherPositionInput.classList.add('hidden');
-                        fileNameDisplay.innerHTML = "ไฟล์ PDF ขนาดไม่เกิน 5MB"; // คืนค่าช่องไฟล์แนบ
-                        base64String = ""; // ล้างข้อมูลไฟล์
+                        fileNameDisplay.innerHTML = "ไฟล์ PDF ขนาดไม่เกิน 5MB";
+                        base64String = ""; 
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     });
                 } else {
@@ -272,6 +269,3 @@
     </script>
 </body>
 </html>
-
-
-
