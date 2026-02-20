@@ -6,7 +6,6 @@
     <title>นัดหมายสัมภาษณ์งาน | ๙ สิงห์ โบรกเกอร์</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
@@ -14,8 +13,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4f46e5', // สี Indigo 600
-                        secondary: '#0891b2', // สี Cyan 600
+                        primary: '#4f46e5',
+                        secondary: '#0891b2',
                     },
                     fontFamily: {
                         sans: ['Prompt', 'sans-serif'],
@@ -26,7 +25,6 @@
     </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <style>
         html { scroll-behavior: smooth; }
         body { -webkit-font-smoothing: antialiased; }
@@ -43,14 +41,10 @@
     <div class="w-full max-w-3xl bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] border border-white p-6 sm:p-10 md:p-12 relative z-10">
         
         <div class="mb-10 text-center flex flex-col items-center">
-            
             <div class="w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-2xl shadow-sm border border-slate-100 mb-5 flex items-center justify-center overflow-hidden p-2">
                 <img src="image_a99780.png" alt="๙ สิงห์ โบรกเกอร์" class="w-full h-full object-contain">
             </div>
-
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 tracking-tight mb-3">
-                นัดหมายสัมภาษณ์งาน
-            </h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 tracking-tight mb-3">นัดหมายสัมภาษณ์งาน</h1>
             <p class="text-sm sm:text-base text-slate-500 max-w-md mx-auto leading-relaxed px-2">
                 <span class="font-semibold text-slate-700">บริษัท ๙ สิงห์ โบรกเกอร์ จำกัด</span><br>
                 กรุณากรอกข้อมูลด้านล่างให้ครบถ้วน เพื่อล็อคคิวสัมภาษณ์กับทีมงานของเรา
@@ -61,11 +55,10 @@
             
             <div class="space-y-5">
                 <h2 class="text-lg sm:text-xl font-semibold text-slate-700 border-b border-slate-100 pb-2">1. ข้อมูลผู้สมัคร</h2>
-                
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-5">
                     <div class="md:col-span-1">
                         <label class="block text-sm font-medium text-slate-600 mb-1.5">คำนำหน้า</label>
-                        <select id="prefix" class="w-full px-4 py-3 sm:py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-white text-slate-800 outline-none">
+                        <select id="prefix" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none">
                             <option value="นาย">นาย</option>
                             <option value="นาง">นาง</option>
                             <option value="นางสาว">นางสาว</option>
@@ -73,20 +66,17 @@
                     </div>
                     <div class="md:col-span-3">
                         <label class="block text-sm font-medium text-slate-600 mb-1.5">ชื่อ - นามสกุล</label>
-                        <input type="text" id="fullName" required placeholder="สมชาย ใจดี" 
-                            class="w-full px-4 py-3 sm:py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-white text-slate-800 outline-none placeholder-slate-400">
+                        <input type="text" id="fullName" required placeholder="สมชาย ใจดี" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none">
                     </div>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                     <div>
                         <label class="block text-sm font-medium text-slate-600 mb-1.5">เบอร์โทรศัพท์ติดต่อ</label>
-                        <input type="tel" id="phone" required placeholder="08x-xxx-xxxx"
-                            class="w-full px-4 py-3 sm:py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-white text-slate-800 outline-none placeholder-slate-400">
+                        <input type="tel" id="phone" required placeholder="08x-xxx-xxxx" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-600 mb-1.5">ทีม Recruiter ที่ดูแลคุณ</label>
-                        <select id="recruiter" required class="w-full px-4 py-3 sm:py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-white text-slate-800 outline-none">
+                        <select id="recruiter" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none">
                             <option value="" disabled selected>-- เลือกทีมงาน --</option>
                             <option value="Sky">คุณสกาย (Sky)</option>
                             <option value="Pond">คุณปอนด์ (Pond)</option>
@@ -98,10 +88,9 @@
 
             <div class="space-y-5">
                 <h2 class="text-lg sm:text-xl font-semibold text-slate-700 border-b border-slate-100 pb-2">2. ตำแหน่งและวันเวลา</h2>
-                
                 <div>
                     <label class="block text-sm font-medium text-slate-600 mb-1.5">ตำแหน่งที่สมัคร</label>
-                    <select id="position" required class="w-full px-4 py-3 sm:py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-white text-slate-800 outline-none">
+                    <select id="position" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none">
                         <option value="" disabled selected>-- กรุณาเลือกตำแหน่ง --</option>
                         <option value="Telesales (ฝ่ายขายทางโทรศัพท์) – ผลิตภัณฑ์ประกันอุบัติเหตุ (PA)">Telesales (PA) - ประกันอุบัติเหตุ</option>
                         <option value="Telesales (Motor Insurance) / เจ้าหน้าที่ฝ่ายขายทางโทรศัพท์ (ประกันภัยรถยนต์)">Telesales (Motor) - ประกันภัยรถยนต์</option>
@@ -110,20 +99,16 @@
                         <option value="Back Office (เจ้าหน้าที่ประจำสำนักงานใหญ่ - สาขา หนองคาย)">Back Office - สาขา หนองคาย</option>
                         <option value="อื่นๆ">อื่นๆ (โปรดระบุ)</option>
                     </select>
-                    
-                    <input type="text" id="otherPosition" placeholder="พิมพ์ตำแหน่งที่ต้องการสมัคร..." 
-                        class="hidden w-full mt-3 px-4 py-3 sm:py-3.5 bg-indigo-50/50 border border-indigo-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none text-slate-800 placeholder-slate-400">
+                    <input type="text" id="otherPosition" placeholder="พิมพ์ตำแหน่งที่ต้องการสมัคร..." class="hidden w-full mt-3 px-4 py-3 bg-indigo-50/50 border border-indigo-200 rounded-xl outline-none">
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                     <div>
                         <label class="block text-sm font-medium text-slate-600 mb-1.5">วันที่สะดวกสัมภาษณ์</label>
-                        <input type="date" id="date" required
-                            class="w-full px-4 py-3 sm:py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-white text-slate-800 outline-none cursor-pointer">
+                        <input type="date" id="date" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none cursor-pointer">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-600 mb-1.5">เวลาที่สะดวก</label>
-                        <select id="time" required class="w-full px-4 py-3 sm:py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-white text-slate-800 outline-none">
+                        <select id="time" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none">
                             <option value="" disabled selected>-- เลือกเวลา --</option>
                             <option value="09:00 - 10:00">09:00 - 10:00 น.</option>
                             <option value="10:30 - 11:30">10:30 - 11:30 น.</option>
@@ -138,20 +123,19 @@
                 <h2 class="text-lg sm:text-xl font-semibold text-slate-700 border-b border-slate-100 pb-2">3. เอกสารประกอบ</h2>
                 <div>
                     <label class="block text-sm font-medium text-slate-600 mb-1.5">แนบ Resume (PDF)</label>
-                    <label class="flex flex-col items-center justify-center w-full h-32 sm:h-40 border-2 border-dashed border-slate-300 rounded-2xl cursor-pointer bg-slate-50 hover:bg-indigo-50 hover:border-indigo-300 transition-colors">
-                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                            <svg class="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    <label class="flex flex-col items-center justify-center w-full h-32 sm:h-40 border-2 border-dashed border-slate-300 rounded-2xl cursor-pointer bg-slate-50 hover:bg-indigo-50 hover:border-indigo-300 transition-colors relative">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6 pointer-events-none text-center">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-slate-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                             <p class="text-sm text-slate-600"><span class="font-semibold text-primary">คลิกอัปโหลด</span> หรือลากไฟล์มาวาง</p>
-                            <p class="text-xs text-slate-400 mt-1">ไฟล์ PDF ขนาดไม่เกิน 5MB</p>
+                            <p id="fileNameDisplay" class="text-xs text-slate-400 mt-2 font-medium bg-slate-100 px-3 py-1 rounded-full inline-block">ไฟล์ PDF ขนาดไม่เกิน 5MB</p>
                         </div>
-                        <input type="file" class="hidden" accept=".pdf" />
+                        <input type="file" id="resumeFile" class="hidden" accept=".pdf" />
                     </label>
                 </div>
             </div>
 
             <div class="pt-4">
-                <button type="submit" 
-                    class="w-full bg-primary hover:bg-indigo-700 text-white font-semibold text-base sm:text-lg py-3.5 sm:py-4 px-8 rounded-xl shadow-lg shadow-indigo-200 transform hover:-translate-y-0.5 transition-all duration-200">
+                <button type="submit" class="w-full bg-primary hover:bg-indigo-700 text-white font-semibold text-base sm:text-lg py-3.5 sm:py-4 px-8 rounded-xl shadow-lg shadow-indigo-200 transform hover:-translate-y-0.5 transition-all duration-200">
                     ยืนยันการนัดหมาย
                 </button>
             </div>
@@ -159,10 +143,9 @@
     </div>
 
     <script>
-        // 🎯 URL ที่เชื่อมไปยังระบบหลังบ้าน (Google Apps Script)
+        // 🎯 เช็คว่า URL ถูกต้องไหม
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwDxUEEUjZlZEVAW7VoOkcZYsZ9LzEUN9WzjXVilmAMi1iwR-O4StsZ70fBctgfAEZ60w/exec';
 
-        // ส่วนจัดการกล่องข้อความ "อื่นๆ" ของตำแหน่ง
         const positionSelect = document.getElementById('position');
         const otherPositionInput = document.getElementById('otherPosition');
 
@@ -170,7 +153,6 @@
             if (this.value === 'อื่นๆ') {
                 otherPositionInput.classList.remove('hidden');
                 otherPositionInput.required = true;
-                setTimeout(() => otherPositionInput.focus(), 50);
             } else {
                 otherPositionInput.classList.add('hidden');
                 otherPositionInput.required = false;
@@ -178,27 +160,54 @@
             }
         });
 
-        // ส่วนจัดการเมื่อกดปุ่มยืนยันนัดหมาย
+        // 🎯 ตัวจัดการไฟล์อัปโหลดแบบเสถียร
+        const fileInput = document.getElementById('resumeFile');
+        const fileNameDisplay = document.getElementById('fileNameDisplay');
+        let base64String = "";
+        let uploadedFileName = "";
+        let uploadedMimeType = "";
+
+        fileInput.addEventListener('change', function() {
+            const file = fileInput.files[0];
+            if(file) {
+                if (file.size > 5242880) { // จำกัด 5MB
+                    Swal.fire('ไฟล์มีขนาดใหญ่เกินไป', 'กรุณาอัปโหลดไฟล์ PDF ที่มีขนาดไม่เกิน 5MB', 'warning');
+                    fileInput.value = '';
+                    fileNameDisplay.innerHTML = "ไฟล์ PDF ขนาดไม่เกิน 5MB";
+                    return;
+                }
+                
+                // โชว์ชื่อไฟล์สีฟ้าบนเว็บ
+                fileNameDisplay.innerHTML = `<span class="text-indigo-600 font-bold">📄 ${file.name}</span>`;
+                uploadedFileName = file.name;
+                uploadedMimeType = file.type;
+
+                // เครื่องยนต์แปลงไฟล์เป็น Base64
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    base64String = e.target.result.split(',')[1];
+                };
+                reader.readAsDataURL(file);
+            } else {
+                fileNameDisplay.innerHTML = "ไฟล์ PDF ขนาดไม่เกิน 5MB";
+                base64String = "";
+            }
+        });
+
+        // 🎯 ทำงานเมื่อกด Submit
         document.getElementById('interviewForm').addEventListener('submit', function(event) {
             event.preventDefault(); 
             
-            // โชว์หน้าจอ Loading หมุนๆ แจ้งให้ผู้ใช้รอ
             Swal.fire({
                 title: 'กำลังบันทึกข้อมูล...',
-                text: 'กรุณารอสักครู่ ระบบกำลังจัดสรรคิวสัมภาษณ์',
+                text: 'กรุณารอสักครู่ ระบบกำลังจัดส่งข้อมูลและอัปโหลดเอกสารเข้าสู่ระบบ',
                 allowOutsideClick: false,
-                didOpen: () => {
-                    Swal.showLoading();
-                }
+                didOpen: () => { Swal.showLoading(); }
             });
             
-            // เช็คว่าผู้สมัครพิมพ์ตำแหน่งมาเองหรือเปล่า
-            let finalPosition = positionSelect.value;
-            if (finalPosition === 'อื่นๆ') {
-                finalPosition = otherPositionInput.value;
-            }
+            let finalPosition = positionSelect.value === 'อื่นๆ' ? otherPositionInput.value : positionSelect.value;
 
-            // รวบรวมข้อมูลทั้งหมดเพื่อส่งเข้า Google Sheets
+            // รวบรวมข้อมูลทั้งหมด
             const data = {
                 prefix: document.getElementById('prefix').value,
                 name: document.getElementById('fullName').value,
@@ -206,78 +215,58 @@
                 position: finalPosition,
                 recruiter: document.getElementById('recruiter').value,
                 date: document.getElementById('date').value,
-                time: document.getElementById('time').value
+                time: document.getElementById('time').value,
+                fileData: base64String, // <--- สอดไส้ไฟล์ไปด้วย
+                fileName: uploadedFileName,
+                mimeType: uploadedMimeType
             };
 
-            // 🚀 สั่งให้ส่งข้อมูลไปที่ Google Sheets
             fetch(scriptURL, { 
                 method: 'POST', 
                 body: JSON.stringify(data),
-                // ป้องกันปัญหา CORS (การบล็อคข้ามโดเมน) จากระบบรักษาความปลอดภัยของเบราว์เซอร์
-                headers: {
-                    'Content-Type': 'text/plain;charset=utf-8',
-                }
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' }
             })
             .then(response => response.json())
             .then(result => {
-                
-                // ถ้าระบบตอบกลับมาว่า สำเร็จ (success)
                 if(result.status === 'success') {
                     
-                    // แปลงชื่อภาษาอังกฤษให้เป็นภาษาไทยเพื่อการแสดงผลสวยๆ
-                    let recruiterNameTH = "";
-                    if (data.recruiter === "Sky") recruiterNameTH = "คุณสกาย";
-                    if (data.recruiter === "Pond") recruiterNameTH = "คุณปอนด์";
-                    if (data.recruiter === "Smile") recruiterNameTH = "คุณสมายด์";
+                    let recruiterTH = {"Sky":"คุณสกาย", "Pond":"คุณปอนด์", "Smile":"คุณสมายด์"}[data.recruiter] || "";
                     
-                    // Template ข้อความเชิญสัมภาษณ์แบบมืออาชีพ
-                    const successMessage = `
+                    const successHTML = `
                         <div style="text-align: left; font-size: 0.95rem; line-height: 1.6; color: #475569; font-family: 'Prompt', sans-serif;">
                             <p><strong>เรียน คุณ ${data.prefix}${data.name},</strong></p>
-                            <p>ทางทีมสรรหาบุคลากรของ <strong>บริษัท ๙ สิงห์ โบรกเกอร์ จำกัด</strong> มีความยินดีที่จะแจ้งให้ทราบว่า ท่านผ่านการคัดเลือกเบื้องต้น และเราขอเชิญท่านเข้ารับการสัมภาษณ์งานในตำแหน่ง <strong>${data.position}</strong></p>
-                            
-                            <hr style="margin: 20px 0; border-top: 1px dashed #cbd5e1;">
-                            
-                            <p style="color: #334155; margin-bottom: 10px;"><strong>📍 รายละเอียดการสัมภาษณ์:</strong></p>
-                            <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: #1e293b;">
-                                <li style="margin-bottom: 5px;">📅 <strong>วันที่:</strong> ${data.date}</li>
-                                <li style="margin-bottom: 5px;">⏰ <strong>เวลา:</strong> ${data.time}</li>
-                                <li style="margin-bottom: 5px;">🏢 <strong>รูปแบบ:</strong> รอการติดต่อกลับเพื่อแจ้งรายละเอียด (ออนไลน์ / ที่สำนักงาน)</li>
-                                <li style="margin-bottom: 5px;">🧑‍💼 <strong>ผู้ดูแล:</strong> ${recruiterNameTH} (ทีมสรรหาบุคลากร)</li>
+                            <p>เราขอเชิญท่านเข้ารับการสัมภาษณ์งานตำแหน่ง <strong>${data.position}</strong></p>
+                            <hr style="margin: 15px 0; border-top: 1px dashed #cbd5e1;">
+                            <ul style="list-style: none; padding-left: 0; margin-bottom: 15px; color: #1e293b;">
+                                <li>📅 <strong>วันที่:</strong> ${data.date}</li>
+                                <li>⏰ <strong>เวลา:</strong> ${data.time}</li>
+                                <li>🧑‍💼 <strong>ผู้ดูแล:</strong> ${recruiterTH}</li>
                             </ul>
-                            
-                            <p style="font-size: 0.85rem; color: #64748b; background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0;">
-                                กรุณารอรับการติดต่อจากทีมงาน เพื่อยืนยันช่องทางการสัมภาษณ์อย่างเป็นทางการ หากมีข้อสงสัยเพิ่มเติม สามารถติดต่อฝ่าย HR ได้โดยตรง
+                            <p style="font-size: 0.85rem; color: #64748b; background: #f8fafc; padding: 10px; border-radius: 8px;">
+                                กรุณารอการติดต่อกลับเพื่อแจ้งรายละเอียดเพิ่มเติมครับ
                             </p>
-                            
-                            <p style="margin-top: 20px; margin-bottom: 0;">ขอแสดงความนับถือ<br><strong>ทีมสรรหาบุคลากร ๙ สิงห์ โบรกเกอร์</strong></p>
                         </div>
                     `;
 
-                    // ปิด Loading และโชว์หน้าต่างจดหมายเชิญ
                     Swal.fire({
                         title: '<span style="color: #1e293b; font-family: \'Prompt\', sans-serif;">บันทึกข้อมูลสำเร็จ!</span>',
-                        html: successMessage,
+                        html: successHTML,
                         icon: 'success',
-                        confirmButtonText: 'รับทราบและปิดหน้าต่าง',
-                        confirmButtonColor: '#4f46e5',
-                        width: '600px',
-                        padding: '2em',
-                        backdrop: `rgba(15, 23, 42, 0.6)` 
+                        confirmButtonText: 'ปิดหน้าต่าง',
+                        confirmButtonColor: '#4f46e5'
                     }).then(() => {
-                        // รีเซ็ตฟอร์มกลับเป็นหน้าเปล่า และเลื่อนขึ้นบนสุด
                         document.getElementById('interviewForm').reset();
                         otherPositionInput.classList.add('hidden');
+                        fileNameDisplay.innerHTML = "ไฟล์ PDF ขนาดไม่เกิน 5MB"; // คืนค่าช่องไฟล์แนบ
+                        base64String = ""; // ล้างข้อมูลไฟล์
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     });
-                    
                 } else {
-                    Swal.fire('เกิดข้อผิดพลาด!', 'ไม่สามารถบันทึกข้อมูลได้ กรุณาลองใหม่อีกครั้ง: ' + result.message, 'error');
+                    Swal.fire('Error!', result.message, 'error');
                 }
             })
             .catch(error => {
-                console.error('Error!', error.message);
-                Swal.fire('ขัดข้องทางเครือข่าย', 'ไม่สามารถเชื่อมต่อระบบหลังบ้านได้ กรุณาตรวจสอบอินเทอร์เน็ตของคุณ', 'error');
+                Swal.fire('Network Error', 'ไม่สามารถเชื่อมต่อระบบหลังบ้านได้', 'error');
             });
         });
     </script>
